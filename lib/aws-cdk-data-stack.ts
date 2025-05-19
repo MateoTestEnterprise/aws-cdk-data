@@ -7,7 +7,10 @@ export class AwsCdkDataStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
+    const connectInstanceName = "mateovexample"
+
     const connectInstance = new connect.CfnInstance(this, 'MyConnectInstance', {
+      instanceAlias: connectInstanceName,
       identityManagementType: 'CONNECT_MANAGED', // options: CONNECT_MANAGED | SAML | EXISTING_DIRECTORY
       attributes: {
         inboundCalls: true,
