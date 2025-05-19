@@ -10,7 +10,9 @@
         "logs:*",
         "s3:*",
         "ssm:*",
-        "connect:*"
+        "connect:*",
+        "ds:*",
+        "kms:*"
       ],
       "Resource": "*",
       "Condition": {
